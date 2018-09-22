@@ -38,4 +38,4 @@ class Solution:
                     if i >= len(strs[j]) or strs[j][i] != char:
                         return strs[0][:i]
 a = Solution()
-print(a.longestCommonPrefix2(['leetcode','leet','lee']))
+print(a.longestCommonPrefix2(['letcode','meet','kee']))

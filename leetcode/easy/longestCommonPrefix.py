@@ -23,3 +23,17 @@ class Solution:
             else:
                 return cp
         return cp
+
+
+        def longestCommonPrefix2(self, strs):
+            """ Vertical scanning algorithm. """
+            if not strs:
+                return None
+
+            # for each character in strs[0] at position i, compare it with
+            # character at i-th position for all the strings.
+            for i in range(len(strs[0])):
+                char = strs[i]
+                for j in range(1, len(strs)):
+                    if i >= len(strs[j]) or strs[j][i] != char:
+                        return strs[0][:i]

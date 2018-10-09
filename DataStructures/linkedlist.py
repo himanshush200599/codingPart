@@ -166,7 +166,7 @@ print(a.deleteBeg())
 print(a.deleteEnd())
 print(a.deleteLoc())
 print(a.reverse())
-print(a.sort())
+print(a.sort()) 
 """
 
 """ Implementation of linked list """

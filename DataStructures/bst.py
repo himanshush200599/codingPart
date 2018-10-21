@@ -122,6 +122,9 @@ class BST:
                 tempNode = self.TreePredecessor(node)
                 node.data = tempNode.data
                 node.left  = self.removeNode(node.left,tempNode.data)
+            return node
+
+
 
 
 
@@ -154,3 +157,5 @@ print("deleting node from BST")
 a.removeNode(a.root,2)
 print("root of the tree is -")
 print(a.root.data)
+print("Inorder traversing of binary search tree --")
+a.inorderTraversal(a.root)

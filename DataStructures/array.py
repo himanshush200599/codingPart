@@ -1,4 +1,4 @@
-class Array(object):
+class Array:
 
     def __init__(self, arr):
         super(Array, self).__init__()

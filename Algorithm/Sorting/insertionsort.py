@@ -28,3 +28,13 @@ class InsertionSort(object):
 a = InsertionSort([int(x) for x in input().split()],6) #n is variable we can store it in variable and then
                                                         #pass in class
 a.printSorted()
+
+
+def sort(a,n):
+    for i in range(2,n):
+        key = a[i]
+        j = i - 1
+        while j >0 and key < a[j]:
+            a[j+1] = a[j]
+            j = j - 1
+        a[j+1] = key

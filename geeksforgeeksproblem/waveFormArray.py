@@ -6,6 +6,7 @@ Input:  arr[] = {20, 10, 8, 6, 4, 2}
 
 """
 def waveForm(a,n):
+    #O(logn)
     a.sort()
     for i in range(0,n,2):
         a[i],a[i+1] = a[i+1],a[i]
@@ -15,3 +16,4 @@ waveForm([20,10,8,6,4,2],6)
 # another approach is to  check all even index elemensts and then
 # compare them with prevois and next to them
 # swap in both cases if it is smaller than it .
+#this will  take O(n)

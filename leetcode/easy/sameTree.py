@@ -23,3 +23,22 @@ class Solution:
         arr2 = []
         inorder(q,arr2,"val")
         return arr1==arr2
+
+
+
+
+#2nd method without inorder traversal
+class Solution:
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        if not p and not q:
+            return True
+        elif not p or not q:
+            return False
+        if p.val == q.val:
+            return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        return False

@@ -10,5 +10,21 @@ def countWays(n):
         for j in range(1,n+1):
             grid[i][j] = grid[i-1][j]+grid[i][j-1]
     return grid[n][n]
-print(countWays(2))
-# favrote problem till now i have solved 
+print(countWays(200))
+# favrote problem till now i have solved
+
+
+
+# better algo for same problem using combinations
+# those highSchool mathematics
+
+
+# function countRoutes(n) . n by n grid
+# result = 1
+# for i = 1 to n do
+# result ← result × (n + i)/i
+# end for
+# return result
+# end function
+
+# this  is O(n) solution and O(1) space compexity

@@ -6,12 +6,11 @@ class Solution:
         """
         res =[]
         if root != None:
-            dq = deque()
+            dq = []
             dq.append(root)
             while len(dq) > 0:
                 temp = []
-                size = len(dq)
-                for i in range(size):
+                for i in range(len(dq)):
                     cur = dq.pop()
                     temp.append(cur.val)
                     if cur.left != None:

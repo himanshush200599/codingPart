@@ -46,12 +46,28 @@ class Traversal(object):
                 root = st.pop(-1)
                 root = root.left
         print(st2[::-1])
+    def levelorder(self,root):
+        if root is None:
+            return
+        qu = []
+        qu.append(root)
+        while len(qu)>0 and root is not None :
+            root = qu.pop(0)
+            print(root.val,end=" ")
+            if root.left is not None:
+                qu.append(root.left)
+            if root.right is not None:
+                qu.append(root.right)
+        print()
 a = TreeNode(1)
-a.left = TreeNode(3)
-a.left.left = TreeNode(6)
-a.left.right = TreeNode(7)
-a.right = TreeNode(5)
+a.left = TreeNode(2)
+a.left.left = TreeNode(4)
+a.left.right = TreeNode(5)
+a.right = TreeNode(3)
+a.right.left = TreeNode(6)
+a.right.right = TreeNode(7)
 b = Traversal()
 b.inorder(a)
 b.preorder(a)
 b.postorder(a)
+b.levelorder(a)

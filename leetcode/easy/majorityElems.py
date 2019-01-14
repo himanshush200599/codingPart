@@ -15,3 +15,9 @@ class Solution(object):
         for key,value in d.items():
             if value > m:
                 return key
+
+    #copied leetcode
+    # efficient
+    #time - O(nlogn) space - O(N)            
+    # nums.sort()
+    #     return nums[len(nums)/2]

@@ -8,3 +8,8 @@ class Solution(object):
             num/=4
         return num==1
     #Inefficient-gives  time limit exceeded
+
+
+# efficient way
+return num>0 and num&(num-1)==0 and len(bin(num)[3:])%2==0
+# from one of user on leetcode

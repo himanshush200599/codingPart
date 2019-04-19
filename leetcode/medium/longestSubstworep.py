@@ -10,11 +10,9 @@
 # O(N) is for checkUniqueChar and O(N) for calling checkUniqueChar each time
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
         def checkUniqueChar(string,index):
+            # this function take every substring and return maximum
+            # length of uniquw characters
             st = set()
             for i in range(index,len(string)):
                 if string[i] not in st:
@@ -24,12 +22,16 @@ class Solution(object):
             return len(string)-index
         maxL  = 0
         for i in range(len(s)):
+            # calling checkUniqueChar function for every substring
             maxL = max(maxL,checkUniqueChar(s,i))
         return maxL
 
 
 # Efficient approach
-
+# using sliding window approach
+# Time complexity - O(N)
+# we are maintaining a hash map and modifiying it whenver we found character which
+# is already in hash map.We are sliding window accordingly
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
         hash = {}

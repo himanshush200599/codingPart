@@ -26,3 +26,18 @@ class Solution(object):
         for i in range(len(s)):
             maxL = max(maxL,checkUniqueChar(s,i))
         return maxL
+
+
+# Efficient approach
+
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        hash = {}
+        start = 0
+        maxL = 0
+        for end in range(len(s)):
+            if s[end] in hash:
+                start = max(start,hash[s[end]]+1)
+            hash[s[end]] = end
+            maxL = max(maxL,end-start+1)
+        return maxL

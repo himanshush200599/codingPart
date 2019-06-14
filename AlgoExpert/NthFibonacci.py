@@ -7,4 +7,12 @@ def NthFibonacci(n):
         init[1] = nextFib
         counter +=1
     return init[1] if n>1 else init[0]
-print(NthFibonacci(1000))
+print(NthFibonacci(500000))
+
+def NthFibonacciRecursion(n):
+    if n==1:
+        return 0
+    if n==2:
+        return 1
+    return NthFibonacciRecursion(n-1)+NthFibonacciRecursion(n-2)
+print(NthFibonacciRecursion(10))

@@ -9,4 +9,4 @@ def validateBSTHelper(root,mini,maxi):
     if root.value < mini or root.value >=maxi:
         return False
     IsLeftValid = validateBSTHelper(root.left,mini,root.value)
-    return IsLeftValid and validateBSTHelper(root.right,root.value,maxi)
+    return IsLeftValid and validateBSTHelper(root.right,root.value+1,maxi)

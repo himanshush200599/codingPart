@@ -1,5 +1,5 @@
 # Here i am going to implement recursive solution for the same
-
+# Just compare value of every node with minimum and maximum around them
 def validateBST(root):
     return validateBSTHelper(root,float("-inf"),float("inf"))
 

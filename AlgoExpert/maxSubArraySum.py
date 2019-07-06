@@ -1,9 +1,8 @@
 # Kadane's Algorithms using O(N)
 
 def maxSubArraySum(arr):
-    n = len(arr)
     currMax = 0
-    maxi = 0
+    maxi = float("-inf")
     for num in arr:
         currMax = max(currMax+num,num)
         maxi = max(maxi,currMax)

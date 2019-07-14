@@ -1,3 +1,6 @@
+# Time - O(2^n*n)
+# Space - O(2^n*n)
+
 def powerset(nums):
     subsets = [[]]
     for num in nums:

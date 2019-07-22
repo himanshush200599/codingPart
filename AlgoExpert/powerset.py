@@ -8,3 +8,4 @@ def powerset(nums):
             currentSubsets = subsets[i]
             subsets.append(currentSubsets+[num])
     return subsets
+print(powerset("abcd"))

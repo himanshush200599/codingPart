@@ -6,6 +6,7 @@
 #                         2    1
 # res[n] = res[0]*res[n-1] + res[1]*res[n-2] + res[2]*res[n-3] + ... + res[n-2]*res[1] + res[n-1]*res[0
 
+# There is formula based on some calculations
 
 class Solution:
     def numTrees(self, n: int) -> int:
